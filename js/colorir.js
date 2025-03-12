@@ -47,6 +47,7 @@ function inicializarJogo() {
     
     baixarBtn.addEventListener('click', baixarDesenho);
     limparBtn.addEventListener('click', limparDesenho);
+    adicionarControlesCanvas();
 }
 
 // Criar miniaturas dos desenhos
@@ -157,6 +158,13 @@ function baixarDesenho() {
     // Criar um clone do SVG para não afetar o original
     const svgClone = areaDesenho.querySelector('svg').cloneNode(true);
     
+    // Adicionar um retângulo branco como fundo
+    const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    rect.setAttribute('width', '100%');
+    rect.setAttribute('height', '100%');
+    rect.setAttribute('fill', 'white');
+    svgClone.insertBefore(rect, svgClone.firstChild);
+    
     // Converter SVG para string
     const svgData = new XMLSerializer().serializeToString(svgClone);
     
@@ -174,6 +182,37 @@ function baixarDesenho() {
     
     // Liberar a URL
     URL.revokeObjectURL(url);
+}
+
+// Adicionar controles para expandir o canvas
+function adicionarControlesCanvas() {
+    const expandirBtn = document.createElement('button');
+    expandirBtn.textContent = 'Expandir Canvas';
+    expandirBtn.classList.add('btn');
+    expandirBtn.addEventListener('click', () => {
+        const svg = areaDesenho.querySelector('svg');
+        const width = parseInt(svg.getAttribute('width')) || 600;
+        const height = parseInt(svg.getAttribute('height')) || 600;
+        svg.setAttribute('width', width + 100);
+        svg.setAttribute('height', height + 100);
+    });
+    
+    const reduzirBtn = document.createElement('button');
+    reduzirBtn.textContent = 'Reduzir Canvas';
+    reduzirBtn.classList.add('btn');
+    reduzirBtn.addEventListener('click', () => {
+        const svg = areaDesenho.querySelector('svg');
+        const width = parseInt(svg.getAttribute('width')) || 600;
+        const height = parseInt(svg.getAttribute('height')) || 600;
+        if (width > 100 && height > 100) {
+            svg.setAttribute('width', width - 100);
+            svg.setAttribute('height', height - 100);
+        }
+    });
+    
+    const ferramentasContainer = document.querySelector('.ferramentas-container');
+    ferramentasContainer.appendChild(expandirBtn);
+    ferramentasContainer.appendChild(reduzirBtn);
 }
 
 // Limpar o desenho atual

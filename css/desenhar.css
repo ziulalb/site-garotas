@@ -185,6 +185,107 @@ input[type="range"] {
     touch-action: none;
 }
 
+/* Estilos para camadas */
+#camadas-container {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#lista-camadas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.camada-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffeef1;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.camada-item.ativa {
+    background-color: #ff9a9e;
+    color: #fff;
+}
+
+.camada-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.camada-controles {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.camada-controles button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: inherit;
+    padding: 0.2rem;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.camada-controles button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.camada-invisivel {
+    opacity: 0.5;
+}
+
+.btn-secondary {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffd6da;
+    color: #ff9a9e;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.btn-secondary i {
+    margin-right: 0.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: #ffbdc3;
+    transform: translateY(-2px);
+}
+
+/* Estilos para múltiplos canvas (camadas) */
+.canvas-container {
+    position: relative;
+}
+
+.canvas-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.canvas-layer.ativa {
+    pointer-events: auto;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .jogo-container {

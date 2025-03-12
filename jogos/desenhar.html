@@ -59,10 +59,50 @@
                                 <button id="borracha" class="ferramenta-btn">
                                     <i class="fas fa-eraser"></i> Borracha
                                 </button>
+                                <button id="balde" class="ferramenta-btn">
+                                    <i class="fas fa-fill-drip"></i> Balde
+                                </button>
+                                <button id="desfazer" class="ferramenta-btn">
+                                    <i class="fas fa-undo"></i> Desfazer
+                                </button>
                                 <button id="limpar" class="ferramenta-btn">
                                     <i class="fas fa-trash"></i> Limpar
                                 </button>
                             </div>
+                        </div>
+                        
+                        <div class="ferramenta-grupo">
+                            <h3>Transparência</h3>
+                            <input type="range" id="transparencia" min="0" max="100" value="100">
+                            <span id="transparencia-valor">100%</span>
+                        </div>
+                        
+                        <div class="ferramenta-grupo">
+                            <h3>Modo</h3>
+                            <div class="botoes-ferramentas">
+                                <button id="modo-simples" class="ferramenta-btn ativa">
+                                    <i class="fas fa-user"></i> Simples
+                                </button>
+                                <button id="modo-pro" class="ferramenta-btn">
+                                    <i class="fas fa-user-tie"></i> Profissional
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div id="camadas-container" class="ferramenta-grupo" style="display: none;">
+                            <h3>Camadas</h3>
+                            <div id="lista-camadas">
+                                <div class="camada-item ativa" data-id="0">
+                                    <span>Camada 1</span>
+                                    <div class="camada-controles">
+                                        <button class="camada-visibilidade"><i class="fas fa-eye"></i></button>
+                                        <button class="camada-excluir"><i class="fas fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="adicionar-camada" class="btn-secondary">
+                                <i class="fas fa-plus"></i> Nova Camada
+                            </button>
                         </div>
                         
                         <div class="ferramenta-grupo">
