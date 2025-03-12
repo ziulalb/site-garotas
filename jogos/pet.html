@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Pet Gamer - Mundo das Garotas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mundo das Garotas</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../jogos.html">Jogos</a></li>
+                    <li><a href="../index.html#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="jogo-banner">
+            <div class="container">
+                <h2>Meu Pet Gamer</h2>
+                <p>Cuide do seu pet virtual e vista-o com acessórios divertidos!</p>
+            </div>
+        </section>
+
+        <section class="jogo-area">
+            <div class="container">
+                <div class="jogo-container">
+                    <div class="pet-jogo">
+                        <div class="pet-container">
+                            <div class="pet-visualizacao">
+                                <div class="pet-container">
+                                    <img src="../img/pet/base.png" alt="Pet" class="pet-imagem">
+                                    <!-- Acessórios serão adicionados via JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <div class="status-container">
+                                <div class="status">
+                                    <span class="status-label">Fome:</span>
+                                    <div class="barra-status">
+                                        <div class="status-valor" id="status-fome"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="status">
+                                    <span class="status-label">Felicidade:</span>
+                                    <div class="barra-status">
+                                        <div class="status-valor" id="status-felicidade"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="status">
+                                    <span class="status-label">Energia:</span>
+                                    <div class="barra-status">
+                                        <div class="status-valor" id="status-energia"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="acoes-container">
+                                <button id="alimentar" class="acao-btn">Alimentar</button>
+                                <button id="brincar" class="acao-btn">Brincar</button>
+                                <button id="dormir" class="acao-btn">Dormir</button>
+                                <button id="limpar" class="acao-btn">Limpar</button>
+                            </div>
+                        </div>
+                        
+                        <div class="acessorios-container">
+                            <div class="categoria-acessorio">
+                                <h3>Chapéus</h3>
+                                <div class="chapeus-container">
+                                    <!-- Opções de chapéus serão adicionadas via JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <div class="categoria-acessorio">
+                                <h3>Roupas</h3>
+                                <div class="roupas-container">
+                                    <!-- Opções de roupas serão adicionadas via JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <div class="categoria-acessorio">
+                                <h3>Coleiras</h3>
+                                <div class="coleiras-container">
+                                    <!-- Opções de coleiras serão adicionadas via JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mundo das Garotas. Todos os direitos reservados.</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/pet.js"></script>
+</body>
+</html> 

@@ -1,0 +1,316 @@
+/* Estilos específicos para o jogo de vestir */
+
+.jogo-banner {
+    background: linear-gradient(135deg, #ff6b6b, #6b66ff);
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+    margin-bottom: 50px;
+    border-radius: 0 0 30px 30px;
+}
+
+.jogo-banner h2 {
+    color: #fff;
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.jogo-banner p {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.jogo-area {
+    padding: 30px 0;
+}
+
+.jogo-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Temas */
+.temas-container {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.temas-container h3 {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.temas {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tema-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tema-btn:hover, .tema-btn.active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.tema-btn[data-tema="valorant"] {
+    border-color: var(--valorant-color);
+    color: var(--valorant-color);
+}
+
+.tema-btn[data-tema="valorant"]:hover, .tema-btn[data-tema="valorant"].active {
+    background-color: var(--valorant-color);
+    color: var(--light-color);
+}
+
+.tema-btn[data-tema="fortnite"] {
+    border-color: var(--fortnite-color);
+    color: var(--fortnite-color);
+}
+
+.tema-btn[data-tema="fortnite"]:hover, .tema-btn[data-tema="fortnite"].active {
+    background-color: var(--fortnite-color);
+    color: var(--light-color);
+}
+
+.tema-btn[data-tema="stardew"] {
+    border-color: var(--stardew-color);
+    color: var(--stardew-color);
+}
+
+.tema-btn[data-tema="stardew"]:hover, .tema-btn[data-tema="stardew"].active {
+    background-color: var(--stardew-color);
+    color: var(--light-color);
+}
+
+/* Área de vestir */
+.vestir-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.personagem-container {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.personagem {
+    position: relative;
+    width: 300px;
+    height: 450px;
+}
+
+.personagem-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.camada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ordem das camadas (z-index) */
+.camada.cabelo {
+    z-index: 5;
+}
+
+.camada.sapato {
+    z-index: 4;
+}
+
+.camada.calca {
+    z-index: 2;
+}
+
+.camada.blusa {
+    z-index: 3;
+}
+
+.camada.acessorio {
+    z-index: 6;
+}
+
+/* Opções de roupas */
+.opcoes-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.categoria-container {
+    margin-bottom: 20px;
+}
+
+.categoria-container h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.opcao {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.opcao span {
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+}
+
+.opcao img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.opcao:hover {
+    border-color: #6b66ff;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.opcao.selecionada {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.3);
+}
+
+/* Ações */
+.acoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6b6b;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: #6b66ff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a55ff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .vestir-container {
+        flex-direction: column;
+    }
+    
+    .personagem-container {
+        margin-bottom: 20px;
+    }
+    
+    .opcao {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .personagem-container {
+        min-height: 400px;
+    }
+    
+    .personagem {
+        width: 250px;
+        height: 375px;
+    }
+    
+    .opcoes-container {
+        max-height: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .temas {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .opcoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .acoes-container {
+        flex-direction: column;
+    }
+    
+    .personagem {
+        width: 200px;
+        height: 300px;
+    }
+} 

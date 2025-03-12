@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Memória - Mundo das Garotas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memoria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mundo das Garotas</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../jogos.html">Jogos</a></li>
+                    <li><a href="../index.html#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="jogo-banner">
+            <div class="container">
+                <h2>Super Memória</h2>
+                <p>Teste sua memória com cartas de seus jogos favoritos!</p>
+            </div>
+        </section>
+
+        <section class="jogo-area">
+            <div class="container">
+                <div class="dificuldade">
+                    <h3>Escolha a dificuldade:</h3>
+                    <div class="dificuldade-btns">
+                        <button class="dificuldade-btn ativa" data-dificuldade="facil">Fácil</button>
+                        <button class="dificuldade-btn" data-dificuldade="medio">Médio</button>
+                        <button class="dificuldade-btn" data-dificuldade="dificil">Difícil</button>
+                    </div>
+                </div>
+                
+                <div class="info-jogo">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span class="timer">00:00</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-hand-pointer"></i>
+                        <span class="movimentos">0</span> movimentos
+                    </div>
+                    <button id="reiniciar" class="reiniciar">
+                        <i class="fas fa-redo-alt"></i>
+                        Reiniciar
+                    </button>
+                </div>
+                
+                <div class="tabuleiro">
+                    <!-- As cartas serão adicionadas via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="mensagem-vitoria">
+        <h2>Parabéns!</h2>
+        <p>Você completou o jogo em <span id="tempo-final">00:00</span> com <span id="movimentos-final">0</span> movimentos!</p>
+        <p>Sua pontuação: <span id="pontuacao-final">0</span> pontos</p>
+        <button id="jogar-novamente" class="btn">Jogar Novamente</button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mundo das Garotas. Todos os direitos reservados.</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/memoria.js"></script>
+</body>
+</html> 

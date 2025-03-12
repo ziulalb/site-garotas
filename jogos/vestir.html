@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilista Gamer - Mundo das Garotas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/vestir.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mundo das Garotas</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../jogos.html">Jogos</a></li>
+                    <li><a href="../index.html#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="jogo-banner">
+            <div class="container">
+                <h2>Estilista Gamer</h2>
+                <p>Vista sua personagem com roupas inspiradas em seus jogos favoritos!</p>
+            </div>
+        </section>
+
+        <section class="jogo-area">
+            <div class="container">
+                <div class="jogo-container">
+                    <div class="vestir-container">
+                        <div class="personagem-container">
+                            <div class="personagem">
+                                <!-- Base da personagem -->
+                                <img src="../img/vestir/base.png" alt="Personagem Base" class="personagem-base">
+                                
+                                <!-- Camadas de roupas -->
+                                <div class="camada calca"></div>
+                                <div class="camada blusa"></div>
+                                <div class="camada sapato"></div>
+                                <div class="camada cabelo"></div>
+                                <div class="camada acessorio"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="opcoes-container">
+                            <div class="categoria-container">
+                                <h4>Cabelo</h4>
+                                <div class="opcoes cabelos">
+                                    <!-- Opções de cabelo serão adicionadas via JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <div class="categoria-container">
+                                <h4>Blusa</h4>
+                                <div class="opcoes blusas">
+                                    <!-- Opções de blusa serão adicionadas via JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <div class="categoria-container">
+                                <h4>Calça/Saia</h4>
+                                <div class="opcoes calcas">
+                                    <!-- Opções de calça serão adicionadas via JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <div class="categoria-container">
+                                <h4>Sapatos</h4>
+                                <div class="opcoes sapatos">
+                                    <!-- Opções de sapato serão adicionadas via JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <div class="categoria-container">
+                                <h4>Acessórios</h4>
+                                <div class="opcoes acessorios">
+                                    <!-- Opções de acessório serão adicionadas via JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="acoes-container">
+                        <button id="randomizar" class="btn">Estilo Aleatório</button>
+                        <button id="salvar" class="btn">Salvar Look</button>
+                        <button id="limpar" class="btn btn-secondary">Limpar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mundo das Garotas. Todos os direitos reservados.</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/vestir.js"></script>
+</body>
+</html> 

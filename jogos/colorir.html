@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Colorido - Mundo das Garotas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/colorir.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mundo das Garotas</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../jogos.html">Jogos</a></li>
+                    <li><a href="../index.html#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="jogo-banner">
+            <div class="container">
+                <h2>Mundo Colorido</h2>
+                <p>Solte sua criatividade colorindo desenhos de seus jogos favoritos!</p>
+            </div>
+        </section>
+
+        <section class="jogo-area">
+            <div class="container">
+                <div class="jogo-container">
+                    <div class="colorir-container">
+                        <div class="desenho-container">
+                            <div id="desenho-area">
+                                <!-- O SVG será carregado aqui via JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="ferramentas-container">
+                            <div class="paleta-cores">
+                                <h3>Cores</h3>
+                                <div class="cores">
+                                    <div class="cor" data-cor="#000000" style="background-color: #000000;"></div>
+                                    <div class="cor" data-cor="#ffffff" style="background-color: #ffffff;"></div>
+                                    <div class="cor" data-cor="#ff0000" style="background-color: #ff0000;"></div>
+                                    <div class="cor" data-cor="#00ff00" style="background-color: #00ff00;"></div>
+                                    <div class="cor" data-cor="#0000ff" style="background-color: #0000ff;"></div>
+                                    <div class="cor" data-cor="#ffff00" style="background-color: #ffff00;"></div>
+                                    <div class="cor" data-cor="#ff00ff" style="background-color: #ff00ff;"></div>
+                                    <div class="cor" data-cor="#00ffff" style="background-color: #00ffff;"></div>
+                                    <div class="cor" data-cor="#ff6b9d" style="background-color: #ff6b9d;"></div>
+                                    <div class="cor" data-cor="#ff9e3d" style="background-color: #ff9e3d;"></div>
+                                    <div class="cor" data-cor="#b3ff66" style="background-color: #b3ff66;"></div>
+                                    <div class="cor" data-cor="#66b3ff" style="background-color: #66b3ff;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="tamanho-pincel">
+                                <h3>Tamanho do Pincel</h3>
+                                <input type="range" id="pincel-tamanho" min="1" max="20" value="5">
+                                <span id="tamanho-valor">5</span>
+                            </div>
+                            
+                            <div class="acoes">
+                                <button id="limpar" class="btn btn-secondary">
+                                    <i class="fas fa-eraser"></i>
+                                    Limpar
+                                </button>
+                                <button id="salvar" class="btn">
+                                    <i class="fas fa-save"></i>
+                                    Salvar
+                                </button>
+                                <button id="preencher" class="btn btn-secondary">
+                                    <i class="fas fa-fill-drip"></i>
+                                    Auto-Preencher
+                                </button>
+                            </div>
+                            
+                            <div class="escolher-desenho">
+                                <h3>Escolher Desenho</h3>
+                                <div class="lista-desenhos">
+                                    <!-- Os desenhos serão adicionados via JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mundo das Garotas. Todos os direitos reservados.</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/colorir.js"></script>
+</body>
+</html> 
